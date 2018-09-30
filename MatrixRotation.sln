@@ -5,6 +5,8 @@ VisualStudioVersion = 15.0.28010.2036
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MatrixRotation", "MatrixRotation\MatrixRotation.csproj", "{4F852032-B1D8-41CB-9233-B42331B388E8}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MatrixRotation.Tests", "MatrixRotation.Tests\MatrixRotation.Tests.csproj", "{8FC54197-6FDF-428A-AD91-B8A8EC480C2D}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +17,10 @@ Global
 		{4F852032-B1D8-41CB-9233-B42331B388E8}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{4F852032-B1D8-41CB-9233-B42331B388E8}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{4F852032-B1D8-41CB-9233-B42331B388E8}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8FC54197-6FDF-428A-AD91-B8A8EC480C2D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8FC54197-6FDF-428A-AD91-B8A8EC480C2D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8FC54197-6FDF-428A-AD91-B8A8EC480C2D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8FC54197-6FDF-428A-AD91-B8A8EC480C2D}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

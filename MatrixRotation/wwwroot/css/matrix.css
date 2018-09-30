@@ -1,12 +1,62 @@
-﻿.matrix-cell {
-    background-color: aqua;
-    border: 2px solid black;
-    height: 100px;
+﻿.matrix-row {
+    margin-bottom: 5px;
+}
+
+.matrix-cell {
+    border: 1px solid black;
+    min-width: 30px;
+    min-height: 30px;
+    width: 50px;
+    height: 50px;
+    display: inline-block;
+    margin-right: 1px;
+    text-align: center;
 }
 
 .matrix-text {
-    text-align: center;
     vertical-align: middle;
-    font-size:100%;
     font-weight: bold;
+    display: inline-block;
+    line-height: 50px;
+    font-size: 16pt;
+}
+
+.inputs-row {
+    margin-bottom: 5px;
+}
+
+.spinner {
+    width: 100px;
+}
+.spinner input {
+    text-align: right;
+}
+.input-group-btn-vertical {
+    position: relative;
+    white-space: nowrap;
+    width: 1%;
+    vertical-align: middle;
+    display: table-cell;
+}
+.input-group-btn-vertical > .btn {
+    display: block;
+    float: none;
+    width: 100%;
+    max-width: 100%;
+    padding: 8px;
+    margin-left: -1px;
+    position: relative;
+    border-radius: 0;
+}
+.input-group-btn-vertical > .btn:first-child {
+    border-top-right-radius: 4px;
+}
+.input-group-btn-vertical > .btn:last-child {
+    margin-top: -2px;
+    border-bottom-right-radius: 4px;
+}
+.input-group-btn-vertical i{
+    position: absolute;
+    top: 0;
+    left: 4px;
 }

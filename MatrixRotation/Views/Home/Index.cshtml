@@ -2,29 +2,39 @@
 @{
     ViewData["Title"] = "Home Page";
 }
-
 <div class="row">
-    <div class="col-sm-3">
+    <div class="inputs-row">
+        <div class="btn btn-primary" value="Rotate" onclick="location.href = '@Url.Action("Rotate", "Home", new {matrixString = Model.ToString()})'">Rotate 90°</div>
+        <div class="btn btn-primary" value="Save" onclick="location.href = '@Url.Action("Save", "Home", new {matrixString = Model.ToString()})'">Save</div>
+        <input class="btn btn-primary" type="submit" value="Upload" form="uploadForm"/>
     </div>
-    <div class="col-sm-6">
-        @for (int i = 0; i < Model.Size; i++)
-        {
-            <div class="row">
-                @for (int j = 0; j < Model.Size; j++)
-                {
-                    <div class="col-sm-2 matrix-cell matrix-text">
-                        @Model.Matrix[i][j]
-                    </div>
-                }
+    <div class="inputs-row">
+        <form asp-action="Upload" asp-controller="Home" method="post" enctype="multipart/form-data" id="uploadForm">
+            <input type="file" name="uploadedFile">
+        </form>
+    </div>
+    <div class="inputs-row">
+        <div class="input-group spinner" style="margin-bottom: 5px;">
+            <input type="text" class="form-control" value=@Model.Size>
+            <div class="input-group-btn-vertical">
+                <button class="btn btn-default" type="button"></button>
+                <button class="btn btn-default" type="button"></button>
             </div>
-        }
-    </div>
-    <div class="col-sm-3">
+        </div>
+        <input class="btn btn-primary" value="Change Size" onclick="location.href = '@Url.Action("ChangeSize", "Home")?newSize=' + window.newSize"/>
     </div>
 </div>
 <div class="row">
-    <div class="btn btn-primary" value="Rotate" onclick="location.href='@Url.Action("Rotate", "Home", Model)'">Повернуть</div>
-    <div class="btn btn-primary">Сохранить</div>
-    <div class="btn btn-primary">Загрузить</div>
-    <div class="btn btn-primary">Сгенерировать</div>
+    @for (int i = 0; i < Model.Size; i++)
+    {
+        <div class="matrix-row">
+            @for (int j = 0; j < Model.Size; j++)
+            {
+                <div class="matrix-cell">
+                    <span class="matrix-text">@Model.Matrix[i][j]</span>
+                </div>
+            }
+        </div>
+    }
 </div>
+

@@ -6,7 +6,10 @@
 
   <ItemGroup>
     <PackageReference Include="Autofac.AspNetCore.Multitenant" Version="1.0.2" />
+    <PackageReference Include="CsvHelper" Version="7.1.1" />
     <PackageReference Include="Microsoft.AspNetCore.App" />
+    <PackageReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Design" Version="2.1.1" />
+    <PackageReference Include="Newtonsoft.Json" Version="11.0.2" />
   </ItemGroup>
 
 </Project>
